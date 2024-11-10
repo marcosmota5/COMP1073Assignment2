@@ -1,0 +1,166 @@
+/* 
+    COMP 1073 Assignment 2
+    Student Id: 200564426
+    Student Name: Marcos Oliveira Mota
+    Created on: 2024-11-09 
+*/
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(241, 241, 241);
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.options {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.options a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.options a:hover {
+    background-color: #555;
+}
+
+main {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Adjust for header and footer */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Footer style */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Material symbols */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    color: white;
+}
+
+/* Center and style gallery */
+#gallery {
+    text-align: center;
+}
+
+figure {
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumbnail list styling */
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin-bottom: 50px;
+    gap: 10px; /* Space between thumbnails */
+}
+
+ul li {
+    flex: 0 1 240px; /* Set a base size but allow thumbnails to resize */
+}
+
+ul img {
+    width: 100%;
+    height: auto;
+    max-width: 240px;
+    cursor: pointer;
+    transition: filter 0.3s, transform 0.3s;
+    border-radius: 4px;
+}
+
+ul img:hover {
+    filter: none;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+figure figcaption {
+    margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    ul li {
+        flex: 0 1 120px; /* Adjust thumbnails on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    figure img {
+        max-width: 90%;
+    }
+}
